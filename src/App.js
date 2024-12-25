@@ -1,24 +1,21 @@
 import React ,{useState ,useEffect }from 'react'; 
-import parse  from 'react-html-parser'; 
+function Linkify(props ){const {children } =props; 
 
 
 
 
 
-function Linkify(props) { const { children } = props; 
-// Extract URLs from text using regular expression 
-
-
-
+//Extract URLs from text using regular expression 
 const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi ; 
 
 
-
-
-
-
 const linkifiedContent =children.replace (urlRegex ,(url )=>(<a href={url} target="_blank" rel="noopener noreferrer">{url }</a >)); 
-return <div>{linkifiedContent }</div >;} 
+
+
+
+
+
+return <div >{linkifiedContent }</div >;} 
 function Conterraproject (){ 
   const [articles ,setArticles ]=useState ([]); 
 
