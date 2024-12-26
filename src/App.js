@@ -1,5 +1,5 @@
 import React ,{useState ,useEffect }from 'react'; 
-function Linkify(props ){const {children } =props; 
+function Linkify (props ){const {children } =props; 
 
 
 
@@ -9,7 +9,7 @@ function Linkify(props ){const {children } =props;
 const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi ; 
 
 
-const linkifiedContent =children.replace (urlRegex ,(url )=>(<a href={url} target="_blank" rel="noopener noreferrer">{url }</a >)); 
+const linkifiedContent =children.replace (urlRegex ,(url )=>(<a href={url} target ="_blank" rel ="noopener noreferrer">{url }</a >)); 
 
 
 
@@ -38,7 +38,7 @@ function Conterraproject (){
 <ul  >{articles.map ((article ,indexes )=>(<li key ={article.data.id  }> 
 <p >{indexes +1} Title  <a href ={article .data .permalink  }target ="_blank">{article .data .title } 
   
-</a ></p ><br />Normal Syntax <br /><Linkify >{article .data    .selftext }</Linkify > 
+</a ></p ><br /><br /><Linkify >{article .data    .selftext }</Linkify > 
 {/*{parse  (article .data    .selftext )}*/} 
 <br />Read about this topic more here at : <a href ={article .data                      .url                          }>{article .data                      .title  }</a > 
  
